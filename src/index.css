@@ -1,13 +1,152 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: #345;
+}
+a {
+  color: rgb(81, 103, 126);
+}
+h2 {
+  font-size: 27px;
+  margin-bottom: 1rem;
+}
+.App {
+  min-height: 90vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+/*  */
+/*  */
+.App-list-col {
+  background: #f7f7ff;
+
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  max-height: 30rem;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #345 #bfbfc5;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #345;
+}
+::-webkit-scrollbar-thumb {
+  background: #bfbfc5;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bfbfc5;
+}
+.app-list-button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+.app-list-button:hover {
+  background-color: #345;
+  color: #f7f7ff;
+}
+/*  */
+/*  */
+.App-selected-col {
+  background: #f7f7ff;
+
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.App-selected {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+.App-selected .avatar {
+  margin: 0 auto 1rem auto;
+}
+.avatar {
+  max-width: 100%;
+  display: block;
+}
+.avatar.playing {
+  animation: spin 4s infinite linear;
+}
+.timer {
+  color: rgba(51, 68, 85, 0.5);
+  margin-bottom: 1rem;
+}
+.play {
+  display: inline-block;
+  margin: 0 auto 1rem auto;
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  background: transparent;
+  color: #345;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}
+.play:hover {
+  background: #234;
+  color: #f7f7ff;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*  */
+.container {
+  width: 50rem;
+  margin: 0 auto;
+  border: 1px solid #345;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  padding: 10px;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+/* footer */
+.footer {
+  font-size: 0.8rem;
+  position: fixed;
+  left: 50%;
+  z-index: -100;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.1);
+  color: rgb(121, 150, 177);
+}
+.footer span {
+  display: block;
+  margin-bottom: 3px;
 }
