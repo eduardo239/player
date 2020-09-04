@@ -6,4 +6,4 @@ ct directory, you can run:
 
 ### react-redux, Provider, connect
 
-### redux, createStore
+### redux, createStore, combineReducers
